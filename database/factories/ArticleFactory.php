@@ -18,9 +18,9 @@ class ArticleFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id' => User::query()-> inRandomOrder()->value('id'),
+            'user_id' => User::query()->inRandomOrder()->value('id'),
             'title' => ucfirst(fake()->words(2, true)),
-            'text'  => fake()->text()
+            'text' => fake()->text(),
         ];
     }
 }
